@@ -1,8 +1,6 @@
-
-
 body {
   margin: 0;
-  background-color: #0C64BE;
+  background-color: #FFC42F;
 }
 
 .landing-header {
@@ -11,7 +9,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    font-size: 10px;
+    font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 600;
     background-color: #0C64BE;
@@ -28,6 +26,7 @@ body {
     font-family: "Roboto", serif;
     color: #FFC42F;
     text-decoration: none;
+
 }
 
 .landing-nav-list {
@@ -41,14 +40,64 @@ body {
 
 
 .landing-main-hero {
-
     display: grid;
     grid-template-areas: "hero";
     place-items: center;
     max-height: 60vh;
+    position: relative;
+}
 
+
+.landing-main-hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #0C64BE;
+
+    z-index: 3;
+}
+
+
+.landing-main-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.landing-main-hero h1 {
+    color: #FFC42F;
+    font-family: "Roboto", serif;
+    font-size: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-buttons {
+    position: relative;
+
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
 }
+
+.hero-buttons button {
+    font-family: "Roboto", serif;
+
+    background-color: #FFC42F;
+    border-radius: 1rem;
+
+    padding: 2rem;
+    font-size: 2rem;
+}
+
 
 .hero-image {
     max-height: 60vh;
@@ -60,12 +109,6 @@ body {
 
 }
 
-.landing-main-hero h1 {
-  font-size: 1rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #FFC42F;
-}
 
 .landing-main-hero > * {
   grid-area: hero;
@@ -86,4 +129,35 @@ body {
 
 .main-content p{
     font-family: "Montserrat", serif;
+}
+
+.article-plans {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.article-plans div {
+    color: #0C64BE;
+    font-family: "Roboto", serif;
+    font-size: 3rem;
+}
+
+.article-plans p {
+    max-width: 13rem;
+    font-size: 1rem;
+
+}
+
+.services-text-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Montserrat", serif;
+    color: #0C64BE;
+    font-size: 4rem;
+    font-weight: 500;
+
 }
